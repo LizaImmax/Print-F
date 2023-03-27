@@ -1,4 +1,11 @@
 #include "main.h"
+/**
+ * handle_specifiers - specifies what to handle.
+ * @flag: glags what to handle
+ * @index: index of waht to handle
+ * handle_flags - catches what to flag
+ * Return: 0
+ */
 
 unsigned char handle_flags(const char *flag, char *index);
 unsigned char handle_length(const char *modifier, char *index);
@@ -160,7 +167,9 @@ int handle_precision(va_list args, const char *modifier, char *index)
 /**
  * handle_specifiers - Matches a conversion specifier with
  *                     a corresponding conversion function.
- * @specifier: A pointer to a potential conversion specifier.
+ * specifier: A pointer to a potential conversion specifier.
+ * @int: integer
+ * @char: character
  *
  * Return: If a conversion function is matched - a pointer to the function.
  *         Otherwise - NULL.
